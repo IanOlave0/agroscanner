@@ -1,6 +1,6 @@
 /**
  * @file src/screens/scanner/ResultadoScreen.tsx
- * @description Pantalla de resultado del análisis de IA.
+ * @description Pantalla de resultado del análisis del modelo ML.
  * Muestra la enfermedad detectada, porcentaje de confianza y tratamiento sugerido.
  *
  * Migración UI/UX:

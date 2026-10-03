@@ -1,6 +1,6 @@
 // ─────────────────────────────────────────
 // COLORES — Paleta moderna para campo
-// Legible bajo sol, identidad CPI Jaguars
+// Legible bajo sol (uso en campo)
 // ─────────────────────────────────────────
 export const COLORS = {
   // Marca principal
@@ -9,7 +9,7 @@ export const COLORS = {
   primaryDark:  '#0D4A1E',
   primaryBg:    '#F1F8F1',
 
-  // Acento dorado — color del jaguar
+  // Acento dorado de la marca
   acento:      '#F4A825',
   acentoLight: '#FFF3D6',
   acentoDark:  '#C17D0A',

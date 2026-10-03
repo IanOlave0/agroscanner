@@ -101,7 +101,7 @@ const ENFERMEDAD_NAME_TO_ID: Record<string, number> = {
 };
 
 /**
- * Obtiene el ID de enfermedad a partir del nombre detectado por la IA.
+ * Obtiene el ID de enfermedad a partir del nombre detectado por el modelo ML.
  * Realiza busqueda por inclusion parcial (case-insensitive).
  *
  * @param name  Nombre de la enfermedad detectada

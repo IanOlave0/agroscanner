@@ -145,7 +145,7 @@ const WelcomeScreen = ({ navigation }: Props) => {
 
           {/* Créditos institucionales */}
           <Text fontSize={12} color="$textMuted" textAlign="center" mt="$xs">
-            CPI Jaguars · TecNM Instituto Tecnológico de Colima
+            TecNM · Instituto Tecnológico de Colima
           </Text>
 
         </YStack>

@@ -88,11 +88,11 @@ export interface Deteccion {
 }
 
 // ─────────────────────────────────────────
-// RESULTADO IA
-// Lo que regresa el modelo de IA
+// RESULTADO ML
+// Lo que regresa el modelo ML
 // tras analizar una imagen
 // ─────────────────────────────────────────
-export interface ResultadoIA {
+export interface ResultadoML {
   enfermedad:        string;
   confianza:         number;   // 0.0 a 1.0, ej: 0.92 = 92%
   resultado_positivo: boolean;
@@ -120,9 +120,9 @@ export type RootStackParams = {
   // Scanner flow
   SeleccionCultivo: undefined;
   Camara:    { cultivoId: number; cultivoNombre: string };
-  Resultado: { resultado: ResultadoIA; imagenUri: string; cultivoId: number; cultivoNombre: string };
-  ResultadoDecision: { resultado: ResultadoIA; imagenUri: string; cultivoId: number; cultivoNombre: string };
-  PinPlacement: { resultado: ResultadoIA; imagenUri: string; cultivoId: number; cultivoNombre: string };
+  Resultado: { resultado: ResultadoML; imagenUri: string; cultivoId: number; cultivoNombre: string };
+  ResultadoDecision: { resultado: ResultadoML; imagenUri: string; cultivoId: number; cultivoNombre: string };
+  PinPlacement: { resultado: ResultadoML; imagenUri: string; cultivoId: number; cultivoNombre: string };
 
   // Parcelas flow
   ParcelaGestion: undefined;

@@ -157,7 +157,7 @@ const HomeScreen = () => {
                 Modo sin conexion disponible
               </Text>
               <Text fontSize={14} color="$textSecondary">
-                La IA funciona directo en tu celular
+                Funciona directo en tu celular, sin internet
               </Text>
             </YStack>
           </XStack>

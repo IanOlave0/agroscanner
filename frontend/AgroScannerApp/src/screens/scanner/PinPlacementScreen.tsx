@@ -1,7 +1,7 @@
 /**
  * @file src/screens/scanner/PinPlacementScreen.tsx
  * @description Pantalla de colocación de pin en parcela.
- * Vincula una detección de IA a una parcela y coordenadas exactas.
+ * Vincula una detección del modelo ML a una parcela y coordenadas exactas.
  *
  * Migración UI/UX:
  * - Layout externo migrado a Tamagui (YStack, XStack, Text).
@@ -32,7 +32,7 @@ import {
 } from 'lucide-react-native';
 
 import { COLORS, SHADOW } from '../../constants';
-import { RootStackParams, ResultadoIA, Parcela, Usuario } from '../../types';
+import { RootStackParams, ResultadoML, Parcela, Usuario } from '../../types';
 import {
   getParcelasByUsuario, getUsuarioActivo, insertDeteccion,
   updateCompartirDatos,

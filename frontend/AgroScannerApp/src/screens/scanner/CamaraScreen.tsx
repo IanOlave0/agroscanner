@@ -2,7 +2,7 @@
  * Pantalla de camara real para escaneo de cultivos.
  *
  * Captura una imagen con CameraView o selecciona una desde galeria, copia la
- * imagen al almacenamiento persistente de la app y conserva el mock de IA.
+ * imagen al almacenamiento persistente de la app y conserva el mock del modelo ML.
  */
 import React, { useEffect, useRef, useState } from 'react';
 import {
@@ -23,7 +23,7 @@ import * as FileSystem from 'expo-file-system/legacy';
 import * as MediaLibrary from 'expo-media-library';
 import { NativeStackNavigationProp } from '@react-navigation/native-stack';
 import { RouteProp } from '@react-navigation/native';
-import { RootStackParams, ResultadoIA } from '../../types';
+import { RootStackParams, ResultadoML } from '../../types';
 import { COLORS, FONT_SIZE, FONT_WEIGHT, SPACING, RADIUS } from '../../constants';
 
 type Props = {
@@ -124,7 +124,7 @@ const CamaraScreen = ({ navigation, route }: Props) => {
     try {
       await new Promise<void>((resolve) => setTimeout(resolve, 2000));
 
-      const resultadoSimulado: ResultadoIA = getResultadoSimulado(cultivoId);
+      const resultadoSimulado: ResultadoML = getResultadoSimulado(cultivoId);
 
       navigation.navigate('Resultado', {
         resultado: resultadoSimulado,
@@ -373,8 +373,8 @@ const getImageExtension = (uri: string) => {
   return match?.[1]?.toLowerCase() || 'jpg';
 };
 
-const getResultadoSimulado = (cultivoId: number): ResultadoIA => {
-  const resultados: Record<number, ResultadoIA> = {
+const getResultadoSimulado = (cultivoId: number): ResultadoML => {
+  const resultados: Record<number, ResultadoML> = {
     1: {
       enfermedad: 'HLB (Dragon Amarillo)',
       confianza: 0.92,

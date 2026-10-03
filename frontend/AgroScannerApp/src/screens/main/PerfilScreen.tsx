@@ -154,8 +154,8 @@ const PerfilScreen = () => {
           <SeccionMenu titulo="Información">
             <ItemMenu
               icon={ClipboardList}
-              label="Versión del modelo IA"
-              valor="v1.0-Colima"
+              label="Modelo de detección"
+              valor="En desarrollo (demo)"
               onPress={() => {}}
             />
             <ItemMenu
@@ -167,12 +167,8 @@ const PerfilScreen = () => {
 
           {/* ── Créditos ─────────────────────────────────────────── */}
           <YStack alignItems="center" gap={4} py="$md">
-            <Text fontSize={32}>🐆</Text>
-            <Text fontSize={16} fontWeight="700" color="$primary">
-              CPI Jaguars
-            </Text>
             <Text fontSize={12} color="$textMuted" textAlign="center">
-              Ian Olave · Carlos Ramírez · José Negrete
+              Ian Olave · Carlos Ramírez · José Negrete · Andrew Ceja · Daria Vázquez
             </Text>
             <Text fontSize={12} color="$textMuted" textAlign="center">
               TecNM · Instituto Tecnológico de Colima

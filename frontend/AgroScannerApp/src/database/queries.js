@@ -451,7 +451,7 @@ export async function getEnfermedadesByCultivo(cultivoId) {
 
 /**
  * Obtiene el tratamiento específico para una combinación cultivo-enfermedad
- * Se muestra cuando la IA detecta una enfermedad
+ * Se muestra cuando el modelo ML detecta una enfermedad
  * 
  * @param {number} cultivoId - ID del cultivo
  * @param {number} enfermedadId - ID de la enfermedad
@@ -475,7 +475,7 @@ export async function getTratamiento(cultivoId, enfermedadId) {
 // ============================================================================
 
 /**
- * Inserta una nueva detección (resultado de análisis de IA)
+ * Inserta una nueva detección (resultado del modelo ML)
  * Vinculada obligatoriamente a una parcela con pin manual
  * Se llama después de procesar una imagen con el modelo
  * 
@@ -485,7 +485,7 @@ export async function getTratamiento(cultivoId, enfermedadId) {
  * @param {number} cultivoId - ID del cultivo analizado
  * @param {number|null} enfermedadId - ID de enfermedad detectada (null si está sano)
  * @param {string} imagenUri - Ruta local de la imagen capturada
- * @param {number} nivelConfianza - Porcentaje de precisión de la IA (0-100)
+ * @param {number} nivelConfianza - Porcentaje de confianza del modelo ML (0-100)
  * @param {number|null} latitud - GPS latitud al momento del análisis (metadata)
  * @param {number|null} longitud - GPS longitud al momento del análisis (metadata)
  * @param {number} pinLatitud - Latitud del pin manual en la parcela
