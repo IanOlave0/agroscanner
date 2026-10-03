@@ -168,7 +168,7 @@ const PerfilScreen = () => {
           {/* ── Créditos ─────────────────────────────────────────── */}
           <YStack alignItems="center" gap={4} py="$md">
             <Text fontSize={12} color="$textMuted" textAlign="center">
-              Ian Olave · Carlos Ramírez · José Negrete · Andrew Ceja · Daria Vázquez
+              Ian Olave · Carlos Ramírez · José Negrete · Andrew Ceja
             </Text>
             <Text fontSize={12} color="$textMuted" textAlign="center">
               TecNM · Instituto Tecnológico de Colima
