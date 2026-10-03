@@ -9,8 +9,8 @@ se guarda en el dispositivo y se sincroniza con la nube solo cuando el usuario
 decide compartir sus datos.
 
 [![Licencia: MIT](https://img.shields.io/badge/Licencia-MIT-yellow.svg)](LICENSE)
-[![Expo SDK 54](https://img.shields.io/badge/Expo-SDK%2054-000020.svg?logo=expo)](https://expo.dev)
-[![React Native 0.81](https://img.shields.io/badge/React%20Native-0.81-61dafb.svg?logo=react)](https://reactnative.dev)
+[![Expo SDK 57](https://img.shields.io/badge/Expo-SDK%2057-000020.svg?logo=expo)](https://expo.dev)
+[![React Native 0.86](https://img.shields.io/badge/React%20Native-0.86-61dafb.svg?logo=react)](https://reactnative.dev)
 [![Plataforma: Android / iOS](https://img.shields.io/badge/Plataforma-Android%20%2F%20iOS-3DDC84.svg?logo=android)](https://expo.dev)
 
 > **Módulo de ML en el dispositivo: en desarrollo.** El flujo completo de captura
@@ -87,7 +87,7 @@ flowchart LR
 
 | Capa | Tecnología |
 | --- | --- |
-| Framework | React Native 0.81 + Expo SDK 54 (TypeScript) |
+| Framework | React Native 0.86 + Expo SDK 57 (TypeScript) |
 | UI | Tamagui v2 + iconos Lucide + iconos SVG de cultivos |
 | Navegación | React Navigation 7 (Stack + tabs condicionales) |
 | Base local | `expo-sqlite` (offline-first) |
@@ -95,7 +95,7 @@ flowchart LR
 | Cámara / medios | `expo-camera`, `expo-image-picker`, `expo-media-library` |
 | Geolocalización | `expo-location` |
 | Geometría geoespacial | `@turf/turf` (área, centroide, GeoJSON) |
-| Mapas | `react-native-maps` (Mapbox planeado) |
+| Mapas | Mapbox (planeado) |
 | ML (en desarrollo) | MobileNetV3 en el dispositivo (TensorFlow Lite) |
 
 ## Cómo empezar
@@ -168,4 +168,4 @@ npx tsc --noEmit
 
 Desarrollado por estudiantes del **TecNM — Instituto Tecnológico de Colima**.
 
-Contribuidores: Ian Olave · Carlos Ramírez · José Negrete · Andrew Ceja.
+Contribuidores: Ian Olave · Carlos Ramírez.

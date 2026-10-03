@@ -8,8 +8,8 @@ diagnoses — and works without internet: everything is stored on-device and syn
 to the cloud only when the user chooses to share data.
 
 [![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](LICENSE)
-[![Expo SDK 54](https://img.shields.io/badge/Expo-SDK%2054-000020.svg?logo=expo)](https://expo.dev)
-[![React Native 0.81](https://img.shields.io/badge/React%20Native-0.81-61dafb.svg?logo=react)](https://reactnative.dev)
+[![Expo SDK 57](https://img.shields.io/badge/Expo-SDK%2057-000020.svg?logo=expo)](https://expo.dev)
+[![React Native 0.86](https://img.shields.io/badge/React%20Native-0.86-61dafb.svg?logo=react)](https://reactnative.dev)
 [![Platform: Android / iOS](https://img.shields.io/badge/Platform-Android%20%2F%20iOS-3DDC84.svg?logo=android)](https://expo.dev)
 
 > **On-device ML module in development.** The capture-to-history flow is fully
@@ -84,7 +84,7 @@ flowchart LR
 
 | Layer | Technology |
 | --- | --- |
-| Framework | React Native 0.81 + Expo SDK 54 (TypeScript) |
+| Framework | React Native 0.86 + Expo SDK 57 (TypeScript) |
 | UI | Tamagui v2 + Lucide icons + custom SVG crop icons |
 | Navigation | React Navigation 7 (Stack + conditional bottom tabs) |
 | Local database | `expo-sqlite` (offline-first) |
@@ -92,7 +92,7 @@ flowchart LR
 | Camera / media | `expo-camera`, `expo-image-picker`, `expo-media-library` |
 | Geolocation | `expo-location` |
 | Geospatial math | `@turf/turf` (plot area, centroid, GeoJSON) |
-| Maps | `react-native-maps` (Mapbox planned) |
+| Maps | Mapbox (planned) |
 | ML (in development) | MobileNetV3 on-device (TensorFlow Lite) |
 
 ## Getting started
@@ -165,4 +165,4 @@ npx tsc --noEmit
 
 Developed by students at **TecNM — Instituto Tecnológico de Colima**.
 
-Contributors: Ian Olave · Carlos Ramírez · José Negrete · Andrew Ceja.
+Contributors: Ian Olave · Carlos Ramírez.
