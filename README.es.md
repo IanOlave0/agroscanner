@@ -8,6 +8,7 @@ síntomas en los cultivos — no emite diagnósticos — y funciona sin internet
 se guarda en el dispositivo y se sincroniza con la nube solo cuando el usuario
 decide compartir sus datos.
 
+[![CI](https://github.com/IanOlave0/agroscanner/actions/workflows/ci.yml/badge.svg)](https://github.com/IanOlave0/agroscanner/actions/workflows/ci.yml)
 [![Licencia: MIT](https://img.shields.io/badge/Licencia-MIT-yellow.svg)](LICENSE)
 [![Expo SDK 57](https://img.shields.io/badge/Expo-SDK%2057-000020.svg?logo=expo)](https://expo.dev)
 [![React Native 0.86](https://img.shields.io/badge/React%20Native-0.86-61dafb.svg?logo=react)](https://reactnative.dev)

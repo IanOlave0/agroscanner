@@ -7,6 +7,7 @@ farmers in Colima, Mexico. AgroScanner detects crop symptoms — it does not iss
 diagnoses — and works without internet: everything is stored on-device and synced
 to the cloud only when the user chooses to share data.
 
+[![CI](https://github.com/IanOlave0/agroscanner/actions/workflows/ci.yml/badge.svg)](https://github.com/IanOlave0/agroscanner/actions/workflows/ci.yml)
 [![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](LICENSE)
 [![Expo SDK 57](https://img.shields.io/badge/Expo-SDK%2057-000020.svg?logo=expo)](https://expo.dev)
 [![React Native 0.86](https://img.shields.io/badge/React%20Native-0.86-61dafb.svg?logo=react)](https://reactnative.dev)
