@@ -207,7 +207,7 @@ const HistorialScreen = () => {
                   Sin escaneos aun
                 </Text>
                 <Text fontSize={16} color="$textMuted" textAlign="center">
-                  Tus diagnosticos apareceran aqui
+                  Tus detecciones apareceran aqui
                 </Text>
               </YStack>
             ) : (

@@ -208,7 +208,7 @@ export default function DeteccionDetalleScreen({ navigation, route }: Props) {
                   </Text>
                   <XStack alignItems="center" gap="$xs">
                     <Text fontSize={14} color="$textMuted">
-                      Certeza del diagnostico:
+                      Certeza de la deteccion:
                     </Text>
                     <Text fontSize={16} fontWeight="700" color={colorEstado}>
                       {confianzaPct}%

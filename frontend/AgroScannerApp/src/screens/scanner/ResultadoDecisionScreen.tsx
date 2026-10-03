@@ -276,10 +276,10 @@ export default function ResultadoDecisionScreen({ navigation, route }: Props) {
           {/* ── Contenido ────────────────────────────────────────── */}
           <YStack px="$lg" gap="$lg">
 
-            {/* Card de diagnóstico */}
+            {/* Card de detección */}
             <YStack bg="$white" borderRadius="$lg" p="$lg" style={SHADOW.md}>
               <Text fontSize={14} color="$textMuted" mb={4}>
-                {esPositivo ? 'Enfermedad detectada:' : 'Diagnóstico:'}
+                {esPositivo ? 'Enfermedad detectada:' : 'Detección:'}
               </Text>
               <Text fontSize={22} fontWeight="700" color={colorHeader} mb={12}>
                 {esPositivo ? resultado.enfermedad : 'Planta sana'}

@@ -91,7 +91,7 @@ const WelcomeScreen = ({ navigation }: Props) => {
 
           {/* Eslogan / descripción del servicio */}
           <Text fontSize={18} color="$textSecondary" textAlign="center" lineHeight={26}>
-            Diagnóstico inteligente{'\n'}para el campo colimense
+            Detección de enfermedades{'\n'}para el campo colimense
           </Text>
 
           {/* ── Chips de cultivos soportados ─────────────────────── */}
