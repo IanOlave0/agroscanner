@@ -2,8 +2,7 @@
   "expo": {
     "name": "AgroScannerApp",
     "slug": "agroscanner-mvp",
-    "version": "1.0.0",
-    "sdkVersion": "54.0.0",
+    "version": "0.5.0",
     "icon": "./assets/jaguar-icon.png",
     "userInterfaceStyle": "light",
     "splash": {
@@ -13,6 +12,12 @@
     },
     "plugins": [
       "expo-sqlite",
+      [
+        "expo-location",
+        {
+          "locationWhenInUsePermission": "AgroScanner usa tu ubicacion para registrar la zona agricola y georreferenciar las detecciones."
+        }
+      ],
       [
         "expo-camera",
         {
