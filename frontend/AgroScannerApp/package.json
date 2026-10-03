@@ -7,7 +7,9 @@
     "start": "expo start",
     "android": "expo start --android",
     "ios": "expo start --ios",
-    "web": "expo start --web"
+    "web": "expo start --web",
+    "test": "jest",
+    "test:ci": "jest --ci --silent"
   },
   "devDependencies": {
     "@babel/core": "^7.20.0",
@@ -34,8 +36,10 @@
     "expo-image-picker": "~57.0.20",
     "expo-location": "~57.0.20",
     "expo-media-library": "~57.0.5",
+    "expo-modules-core": "~57.0.20",
     "expo-splash-screen": "~57.0.9",
     "expo-sqlite": "~57.0.3",
+    "jest-expo": "~57.0.5",
     "lucide-react-native": "^1.14.0",
     "react": "19.2.3",
     "react-dom": "19.2.3",
