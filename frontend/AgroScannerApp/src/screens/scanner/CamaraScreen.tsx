@@ -19,7 +19,7 @@ import { SafeAreaView } from 'react-native-safe-area-context';
 import { RefreshCw } from 'lucide-react-native';
 import { CameraView, useCameraPermissions, type CameraType, type FlashMode } from 'expo-camera';
 import * as ImagePicker from 'expo-image-picker';
-import * as FileSystem from 'expo-file-system/legacy';
+import { Directory, File, Paths } from 'expo-file-system';
 import * as MediaLibrary from 'expo-media-library';
 import { NativeStackNavigationProp } from '@react-navigation/native-stack';
 import { RouteProp } from '@react-navigation/native';
@@ -30,8 +30,6 @@ type Props = {
   navigation: NativeStackNavigationProp<RootStackParams, 'Camara'>;
   route: RouteProp<RootStackParams, 'Camara'>;
 };
-
-const PHOTO_DIR = `${FileSystem.documentDirectory ?? ''}agroscanner/capturas/`;
 
 const CamaraScreen = ({ navigation, route }: Props) => {
   const { cultivoId, cultivoNombre } = route.params;
@@ -88,17 +86,14 @@ const CamaraScreen = ({ navigation, route }: Props) => {
   };
 
   const persistImage = async (sourceUri: string) => {
-    if (!FileSystem.documentDirectory) {
-      return sourceUri;
-    }
-
-    await FileSystem.makeDirectoryAsync(PHOTO_DIR, { intermediates: true });
+    const photoDir = new Directory(Paths.document, 'agroscanner', 'capturas');
+    photoDir.create({ intermediates: true, idempotent: true });
 
     const extension = getImageExtension(sourceUri);
-    const destinationUri = `${PHOTO_DIR}deteccion-${Date.now()}.${extension}`;
-    await FileSystem.copyAsync({ from: sourceUri, to: destinationUri });
+    const destination = new File(photoDir, `deteccion-${Date.now()}.${extension}`);
+    await new File(sourceUri).copy(destination);
 
-    return destinationUri;
+    return destination.uri;
   };
 
   const saveImageToGallery = async (imageUri: string) => {
@@ -417,7 +412,11 @@ const styles = StyleSheet.create({
     backgroundColor: 'rgba(0,0,0,0.18)',
   },
   permissionFallback: {
-    ...StyleSheet.absoluteFillObject,
+    position: 'absolute',
+    top: 0,
+    left: 0,
+    right: 0,
+    bottom: 0,
     alignItems: 'center',
     justifyContent: 'center',
     paddingHorizontal: SPACING.xl,
@@ -532,7 +531,11 @@ const styles = StyleSheet.create({
     textShadowRadius: 4,
   },
   analizandoOverlay: {
-    ...StyleSheet.absoluteFillObject,
+    position: 'absolute',
+    top: 0,
+    left: 0,
+    right: 0,
+    bottom: 0,
     backgroundColor: 'rgba(0,0,0,0.85)',
     alignItems: 'center',
     justifyContent: 'center',
@@ -584,7 +587,11 @@ const styles = StyleSheet.create({
     backgroundColor: COLORS.white,
   },
   previewOverlay: {
-    ...StyleSheet.absoluteFillObject,
+    position: 'absolute',
+    top: 0,
+    left: 0,
+    right: 0,
+    bottom: 0,
     backgroundColor: 'rgba(0,0,0,1)',
     alignItems: 'center',
     justifyContent: 'center',

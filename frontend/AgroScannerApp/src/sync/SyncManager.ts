@@ -14,7 +14,7 @@
  */
 
 import { supabase } from '../supabase/client';
-import * as FileSystem from 'expo-file-system/legacy';
+import { File } from 'expo-file-system';
 import {
   getParcelasPendientes,
   getDeteccionesPendientes,
@@ -50,31 +50,10 @@ const withRetry = async <T>(fn: () => Promise<T>, label: string): Promise<T> => 
 };
 
 /**
- * Decodifica una cadena Base64 y la convierte en un Uint8Array
- * para subir archivos binarios a Supabase Storage.
- *
- * Utiliza atob() disponible en el runtime de React Native para
- * la decodificacion binaria desde Base64.
- *
- * @param base64  Cadena de bytes en formato Base64
- * @returns Array de bytes tipado
- */
-const base64ToUint8Array = (base64: string): Uint8Array => {
-  const binaryString = atob(base64);
-  const bytes = new Uint8Array(binaryString.length);
-  for (let i = 0; i < binaryString.length; i++) {
-    bytes[i] = binaryString.charCodeAt(i);
-  }
-  return bytes;
-};
-
-/**
  * Sube una imagen local a Supabase Storage y retorna la URL publica.
  *
- * En React Native, fetch() no soporta el esquema file:// para leer
- * archivos del sistema de archivos local. Se utiliza en su lugar
- * FileSystem.readAsStringAsync con codificacion Base64, se decodifica
- * a Uint8Array y se sube el contenido binario real.
+ * Se lee el archivo local con la API File de expo-file-system
+ * (metodo bytes()) y se sube el contenido binario real a Storage.
  *
  * @param localUri    Ruta local de la imagen (file://)
  * @param userId      UUID del usuario dueno de la imagen
@@ -90,11 +69,7 @@ const uploadImage = async (localUri: string, userId: string, deteccionId: string
   console.log(`[AgroScanner Sync] Subiendo imagen: ${path}`);
 
   await withRetry(async () => {
-    const base64 = await FileSystem.readAsStringAsync(localUri, {
-      encoding: 'base64',
-    });
-
-    const fileBytes = base64ToUint8Array(base64);
+    const fileBytes = await new File(localUri).bytes();
 
     const { error } = await supabase.storage
       .from(BUCKET_NAME)

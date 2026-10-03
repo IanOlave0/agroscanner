@@ -2,14 +2,9 @@
   "expo": {
     "name": "AgroScannerApp",
     "slug": "agroscanner-mvp",
-    "version": "0.6.1",
+    "version": "0.7.0",
     "icon": "./assets/jaguar-icon.png",
     "userInterfaceStyle": "light",
-    "splash": {
-      "image": "./assets/logo/jaguar.png",
-      "resizeMode": "contain",
-      "backgroundColor": "#ffffff"
-    },
     "plugins": [
       "expo-sqlite",
       [
@@ -35,6 +30,14 @@
         {
           "photosPermission": "AgroScanner necesita acceso a tus fotos para guardar capturas de cultivos.",
           "savePhotosPermission": "AgroScanner necesita permiso para guardar las fotos capturadas en tu galeria."
+        }
+      ],
+      [
+        "expo-splash-screen",
+        {
+          "image": "./assets/logo/jaguar.png",
+          "resizeMode": "contain",
+          "backgroundColor": "#ffffff"
         }
       ]
     ]
